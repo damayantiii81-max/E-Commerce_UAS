@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken YUMMY</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- My Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar start -->
+  <nav class="navbar">
+  <a href="#" class="navbar-logo">Chicken<span>YUMMY</span>.</a>
+
+  <div class="navbar-nav">
+    <a href="#home">Home</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#menu">Menu</a>
+    <a href="#products">Produk</a>
+    <a href="#contact">Kontak</a>
+  </div>
+
+  <div class="navbar-extra">
+    <a href="#" id="search-button"><i data-feather="search"></i></a>
+    <a href="#" id="shopping-cart-button" style="position:relative;">
+      <i data-feather="shopping-cart"></i>
+      <span id="cart-badge" style="position:absolute;top:-8px;right:-8px;background:red;color:white;border-radius:50%;padding:2px 6px;font-size:12px;display:none;">0</span>
+    </a>
+    <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  
+  <div id="cart-total" style="padding:10px;font-weight:bold;">Total: IDR 0</div>
+
+    <!-- Search Form start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+    <!-- Search Form end -->
+
+    <!-- Shopping Cart start -->
+    <div class="shopping-cart">
+    </div>
+  
+    <button id="buy-btn" style="margin:10px 0 20px 0;padding:10px 30px;background:var(--primary,#59ff00);color:#000000;border:none;border-radius:6px;font-size:1.2rem;cursor:pointer;">Buy</button>
+   </nav>
+  <!-- Navbar end -->
+
+  <!-- Tambahkan di bawah navbar -->
+    <div id="cart-success-notif" style="display:none;position:fixed;top:80px;right:30px;z-index:99999;background:var(--primary);color:#000000;padding:1rem 2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-weight:bold;">
+      Berhasil ditambahkan ke cart!
+    </div>
+
+  <!-- Hero Section start -->
+  <section class="hero" id="home">
+  <div class="mask-container">
+    <main class="content">
+      <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
+      <h2 class="slogan">Ayam Juicy, Rasa YUMMY!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, enim.</p>
+    </main>
+  </div>
+</section>
+  <!-- Hero Section end -->
+
+  <!-- About Section start -->
+  <section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2>
+
+    <div class="row">
+      <div class="about-img">
+        <img src="img/menu/ay2.jpg" alt="Tentang Kami">
+      </div>
+      <div class="content">
+        <h3>Kenapa memilih kami?</h3>
+        <p>Chicken YUMMY adalah brand ayam goreng yang menghadirkan sensasi renyah di luar, juicy di dalam, dengan cita rasa khas yang sulit dilupakan. Kami menggunakan bahan segar, bumbu pilihan, dan proses olahan yang terjaga kualitasnya agar setiap sajian selalu istimewa. Dengan berbagai varian rasa dan penyajian yang praktis.</p>
+        <p> Chicken YUMMY siap menemani momen santai, kumpul bersama keluarga, hingga hangout bareng teman. Karena bagi kami, ayam goreng bukan sekadar makanan, tapi pengalaman lezat yang bikin nagih setiap saat!</p>
+      </div>
+    </div>
+  </section>
+  <!-- About Section end -->
+
+  <!-- Menu Section start -->
+   
+  <section id="menu" class="menu">
+    <h2><span>Menu</span> Kami</h2>
+    <p>Chicken YUMMY menyajikan ayam goreng crispy, ayam pedas dengan sambal khas, burger juicy, camilan renyah, hingga minuman segar. Semua menu dibuat dari bahan pilihan dan bumbu istimewa untuk menghadirkan rasa lezat yang selalu bikin nagih.
+    </p>
+
+    <div class="row">
+      <div class="menu-card">
+        <img src="img/menu/burger.jpg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Premium beef burger" data-price="IDR 65K" data-desc="Menggunakan bahan premium dengan kualitas terjaga.Porsi besar, juicy, dan memuaskan untuk semua kalangan. Rasa yang unik & berbeda dari burger biasa. Cocok untuk makan siang, dinner, atau hangout bareng teman.">
+        <h2 class="menu-card-title">- Premium beef burger -</h2>
+        <p class="menu-card-price">IDR 65K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Chicken with Honey Sauce" data-price="IDR 25K" data-desc="Chicken with Honey Sauce adalah ayam goreng crispy yang dipadukan dengan saus madu manis gurih, memberikan sensasi renyah di luar, juicy di dalam, dan cita rasa lezat yang bikin nagih di setiap gigitan.">
+        <h3 class="menu-card-title">- Chicken with Honey Sauce -</h3>
+        <p class="menu-card-price">IDR 25K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr2.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Chicken with BBQ Sauce" data-price="IDR 30K" data-desc="Chicken with BBQ Sauce menghadirkan ayam goreng crispy yang dipadukan dengan saus BBQ smoky manis gurih, menghasilkan rasa lezat yang kaya dan sempurna untuk para pecinta BBQ.">
+        <h3 class="menu-card-title">- Chicken with BBQ Sauce -</h3>
+        <p class="menu-card-price">IDR 30K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr3.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Sweet Chili Crunchy Chicken" data-price="IDR 29K" data-desc="Sweet Chili Crunchy Chicken adalah ayam goreng renyah dengan balutan saus cabai manis pedas yang menggugah selera, menghadirkan perpaduan rasa kriuk, manis, dan pedas nikmat di setiap gigitan.">
+        <h3 class="menu-card-title">- Sweet Chili Crunchy Chicken -</h3>
+        <p class="menu-card-price">IDR 29K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr4.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Chicken Wings Spicy Sauce" data-price="IDR 20K" data-desc="Chicken Wings Spicy Sauce adalah sayap ayam renyah dengan siraman saus pedas spesial yang menggugah selera, cocok untuk pecinta sensasi pedas yang bikin nagih.">
+        <h3 class="menu-card-title">- Chicken Wings Spicy Sauce -</h3>
+        <p class="menu-card-price">IDR 20K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr5.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="YUMMY Chicken Pop Bites" data-price="IDR 23K" data-desc="YUMMY Chicken Pop Bites adalah potongan ayam kecil yang crispy di luar, juicy di dalam, praktis dinikmati, dan sempurna jadi camilan gurih kapan saja.">
+        <h3 class="menu-card-title">- YUMMY Chicken Pop Bites -</h3>
+        <p class="menu-card-price">IDR 23K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr6.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="YUMMY Fresh Lemon Te" data-price="IDR 15K" data-desc="YUMMY Fresh Lemon Tea adalah perpaduan teh pilihan dengan perasan lemon segar, menghadirkan rasa manis-asam yang pas dan menyegarkan di setiap tegukan.">
+        <h3 class="menu-card-title">- YUMMY Fresh Lemon Tea -</h3>
+        <p class="menu-card-price">IDR 15K</p>
+      </div>
+      <div class="menu-card">
+        <img src="img/menu/ay-tr7.jpeg" alt="Espresso" class="menu-card-img item-detail-button" data-title="Wedges Cheese Melt" data-price="IDR 17K" data-desc="Wedges Cheese Melt adalah potongan kentang tebal yang digoreng hingga crispy, lalu disajikan dengan lelehan keju creamy yang gurih dan lezat.">
+        <h3 class="menu-card-title">- Wedges Cheese Melt -</h3>
+        <p class="menu-card-price">IDR 17K</p>
+      </div>
+    </div>
+  </section>
+  <!-- Menu Section end -->
+
+  <!-- Products Section start -->
+  <section class="products" id="products">
+    <h2><span>Produk Unggulan</span> Kami</h2>
+    <p>Premium Beef Burger dibuat dari 100% daging sapi premium yang tebal dan juicy, dipanggang sempurna lalu dipadukan dengan roti brioche lembut, keju leleh, sayuran segar, dan saus spesial. Rasa gurih, porsi melimpah, dan kualitas terbaik menjadikannya menu unggulan sekaligus best seller di Chicken YUMMY.</p><br
+    <class="row">
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/menu/burger.jpg " alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h2> Premium Beef Burger</h2>
+          <h4>Best Seller</h4>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 65K <span>IDR 80K</span></div>
+        </div>
+        </div>
+      </div>
+      </div>
+  </section>
+  <!-- Products Section end -->
+
+  <!-- Contact Section start -->
+  <section id="contact" class="contact">
+    <h2><span>Kontak</span> Kami</h2>
+    <p>Hubungi Chicken YUMMY untuk pemesanan, kerjasama, atau pertanyaan seputar menu kami. Kami siap melayani Anda dengan cepat dan ramah.</p>
+
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+      <form action="">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="nama">
+        </div>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="text" placeholder="email">
+        </div>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="no hp">
+        </div>
+        <button type="submit" class="btn">kirim pesan</button>
+      </form>
+
+    </div>
+  </section>
+  <!-- Contact Section end -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="socials">
+      <a href="#"><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">damayanti</a>. | &copy; 2025 S.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Modal Box Item Detail start -->
+  <div class="modal" id="item-detail-modal">
+    <div class="modal-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="modal-content">
+        <img src="img/menu/burger.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Premium Beef Burger</h3>
+          <p>Premium Beef Burger dibuat dari daging sapi 100% premium yang juicy, dipadukan dengan roti brioche lembut, keju leleh, sayuran segar, dan saus spesial. Rasa gurih dan porsi melimpah membuatnya jadi menu best seller yang selalu dicari pelanggan!</p>
+          <div class="product-price">IDR 65K </div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Box Item Detail end -->
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace()
+  </script>
+
+  <!-- My Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
